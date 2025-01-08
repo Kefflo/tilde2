@@ -1,0 +1,31 @@
+<header
+  style="
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffa500;
+    padding: 0px 22px;
+  "
+>
+  <img [src]="imageSource" alt="Logo" style="height: 40px" />
+  <router-outlet>
+    <nav>
+      <ul style="display: flex; list-style: none">
+        <li style="margin-right: 10px">
+          <a routerLink="main-content" routerLinkActive="active">Home</a>
+        </li>
+        <li style="margin-right: 10px">
+          <a routerLink="/transactions" routerLinkActive="active"
+            >Transactions</a
+          >
+        </li>
+        <li style="margin-right: 10px">
+          <a routerLink="/statistics" routerLinkActive="active">Statistics</a>
+        </li>
+      </ul>
+    </nav>
+  </router-outlet>
+  <h1>My project</h1>
+</header>
+
+<router-outlet></router-outlet>

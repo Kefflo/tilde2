@@ -1,0 +1,36 @@
+<mat-form-field>
+  <mat-label>User 1</mat-label>
+  <mat-select [(ngModel)]="moneySender" (ngModelChange)="pickSender()">
+    @for (person of persons; track person) {
+    <mat-option [value]="person">{{ person.name }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>User 2</mat-label>
+  <mat-select [(ngModel)]="moneyReceiver">
+    @for (person of filteredPersons; track person) {
+    <mat-option [value]="person">{{ person.name }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+<mat-form-field floatLabel="always">
+  <mat-label for="amount">Amount</mat-label>
+  <input
+    [(ngModel)]="amount"
+    matInput
+    type="number"
+    class="example-right-align"
+    placeholder="0"
+  />
+  <span matTextPrefix>$&nbsp;</span>
+</mat-form-field>
+<button mat-stroked-button (click)="sendMoney()">Basic</button>
+
+<div>
+  <span *ngFor="let transaction of transactions"
+    >{{ transaction.fromId }} -> {{ transaction.toId }} |
+    {{ transaction.amount }}</span
+  >
+</div>

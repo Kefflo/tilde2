@@ -1,0 +1,14 @@
+.example-card {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.ExampleCardTitle {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 102px;
+}
+#account-select {
+    width: 100%;
+}
